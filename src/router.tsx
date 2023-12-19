@@ -3,13 +3,7 @@ import App from "./App";
 import ErrorPage from "./pages/ErrorPage";
 import Planet from "./pages/Planet";
 import { getPlanet } from "./utils/planet";
-import planetData from "./assets/data.json";
-
-const routes: PlanetRoute[] = planetData.map((planet) => ({
-  path: planet.name == "Mercury" ? "/" : planet.name.toLowerCase(),
-  planetName: planet.name as Planets,
-  index: planet.name == "Mercury",
-}));
+import { routes } from "./constants/routes";
 
 let router = createBrowserRouter([
   {
